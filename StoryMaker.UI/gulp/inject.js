@@ -28,6 +28,7 @@ gulp.task('inject', ['scripts', 'styles'], function () {
     addRootSlash: false
   };
 
+debugger;
   return gulp.src(path.join(conf.paths.src, '/*.html'))
     .pipe($.inject(injectStyles, injectOptions))
     .pipe($.inject(injectScripts, injectOptions))
