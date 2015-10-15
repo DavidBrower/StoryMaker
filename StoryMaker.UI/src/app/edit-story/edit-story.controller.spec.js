@@ -22,11 +22,6 @@
 			
 			expect(vm.saveStory).toBeDefined();
 		}));
-		
-		it("saveStory() should be defined", inject(function($controller){
-			var vm = $controller('EditStoryController');
-			
-			expect(vm.saveStory).toBeDefined();
-		}));
+
 	});
 })();

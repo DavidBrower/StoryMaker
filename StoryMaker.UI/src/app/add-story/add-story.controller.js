@@ -10,6 +10,7 @@
 			var vm = this;
 			vm.text = {};
 			vm.author = {};
+			vm.project = {};
 			vm.addStory = addStory;
 			
 			function addStory(){
