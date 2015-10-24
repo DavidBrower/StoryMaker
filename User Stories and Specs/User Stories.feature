@@ -1,3 +1,9 @@
+Feature: Create a project
+
+		As the product manager
+		I can create a new project 
+		To store stories and specs that belong together
+		
 Feature: Create a user story
 
 		As the product owner

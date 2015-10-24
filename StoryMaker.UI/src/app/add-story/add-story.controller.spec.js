@@ -1,12 +1,14 @@
 (function () {
 	'use strict';
-	describe('EditStoryController', function () {
+	describe('AddStoryController', function () {
 
-		var $controller;
+		var $controller, storyService;
 
 		beforeEach(module('storyMaker'));
 
-		beforeEach(inject(function (_$controller_) {
+		beforeEach(inject(function (_$controller_, StoryService) {
+			//spyOn(StoryService, 'addStory');
+			storyService = StoryService;
 			$controller = _$controller_;
 		}));
 
@@ -30,7 +32,7 @@
 			expect(vm.addStory).toBeDefined();
 		});
 
-		xit("should add a story", function ($controller) {
+		it("should add a story", function ($controller) {
 			var vm = $controller('AddStoryController');
 
 			vm.project = "StoryMaker";
@@ -41,7 +43,7 @@
 						
 			//vm.addStory();
 			
-			expect(vm.methodName).toHaveBeenCalledWith(vm.author, vm.text);
+			expect(storyService.bump).toBeDefined();
 		});
 	});
 })();

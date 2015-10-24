@@ -5,7 +5,9 @@
     .module('storyMaker')
     .controller('EditStoryController', EditStoryController);
 	
-	function EditStoryController(){
+	EditStoryController.$inject = ['StoryService'];
+	
+	function EditStoryController(storyService){
 		/* jshint validthis: true */
 		var vm = this;
 		
@@ -14,7 +16,8 @@
 		vm.saveStory = saveStory;
 		
 		function saveStory() {
-			
+			storyService.saveStory()
+						.then();
 		}
 	}
 	
