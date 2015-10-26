@@ -8,11 +8,24 @@
   /** @ngInject */
   function routeConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state('main', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        controller: function($scope){
+                $scope.items = ["A", "List", "Of", "Items"];
+              }
+      })
+      .state('addstory', {
+        url: '/add-story',
+        templateURL: 'add-story/add-story.html', 
+        controller: 'AddStoryController'
+      })
+      .state('editstory', {
+        url: '/edit-story',
+        templateURL: 'edit-story/edit-story.html', 
+        controller: function($scope){
+                $scope.items = ["A", "List", "Of", "Items"];
+              }
       });
 
     $urlRouterProvider.otherwise('/');
