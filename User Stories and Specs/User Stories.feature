@@ -1,8 +1,12 @@
 Feature: Create a project
 
-		As the product manager
+		As the product owner
 		I can create a new project 
 		To store stories and specs that belong together
+		
+		Scenario: Creates Successfully
+		
+		Given that 
 		
 Feature: Create a user story
 
@@ -26,6 +30,6 @@ Feature: Write a Gherkin spec
 Feature: Submit Gherkin spec
 Feature: Edit an existing Gherkin spec
 Feature: Comment on a Gherkin spec
-Feature: View user stories by statusgi
+Feature: View user stories by status
 Feature: View Gherkin specs by status
 Feature: 

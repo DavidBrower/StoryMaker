@@ -17,12 +17,12 @@
       })
       .state('addstory', {
         url: '/add-story',
-        templateURL: 'add-story/add-story.html', 
+        templateURL: 'app/add-story/add-story.html', 
         controller: 'AddStoryController'
       })
       .state('editstory', {
         url: '/edit-story',
-        templateURL: 'edit-story/edit-story.html', 
+        templateURL: 'app/edit-story/edit-story.html', 
         controller: function($scope){
                 $scope.items = ["A", "List", "Of", "Items"];
               }
