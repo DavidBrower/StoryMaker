@@ -15,17 +15,15 @@
                 $scope.items = ["A", "List", "Of", "Items"];
               }
       })
-      .state('addstory', {
-        url: '/add-story',
-        templateURL: 'app/add-story/add-story.html', 
-        controller: 'AddStoryController'
+      .state('main.addstory', {
+          url: 'add-story/',
+          templateUrl: 'app/add-story/add-story.html',
+          controller: 'AddStoryController'
       })
-      .state('editstory', {
-        url: '/edit-story',
-        templateURL: 'app/edit-story/edit-story.html', 
-        controller: function($scope){
-                $scope.items = ["A", "List", "Of", "Items"];
-              }
+      .state('main.editstory', {
+          url: 'edit-story/',
+          templateUrl: 'app/edit-story/edit-story.html',
+          controller: 'EditStoryController'
       });
 
     $urlRouterProvider.otherwise('/');

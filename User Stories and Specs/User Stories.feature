@@ -6,7 +6,9 @@ Feature: Create a project
 		
 		Scenario: Creates Successfully
 		
-		Given that 
+		Given that a project with the name NewProject doesn't existing
+		When I create a project named NewProject
+		Then I will be informed that a project named NewProject has been created
 		
 Feature: Create a user story
 
@@ -17,10 +19,20 @@ Feature: Create a user story
 		Scenario: Creates successfully
 			
 			Given that I have entered the text of a user story
+			And I have specified the project
 			When I save that user story
-			Then it will be 
+			Then it will be available to submit for review
 		
 Feature: Submit user story
+
+		As the product owner
+		I can submit a user story for review
+		So that I can get feedback on it
+		
+		Scenario: Submits successfully
+		
+		Given that 
+		
 Feature: Edit an existing user story
 Feature: Comment on a user story
 Feature: Create pull request for user story
