@@ -27,11 +27,14 @@ Feature: Submit user story
 
 		As the product owner
 		I can submit a user story for review
-		So that I can get feedback on it
+		So that other stakeholders can comment on it
 		
 		Scenario: Submits successfully
 		
-		Given that 
+		Given that I have created a user story
+		When I submit that story for review
+		Then the status of that story will be "submitted"
+		
 		
 Feature: Edit an existing user story
 Feature: Comment on a user story

@@ -10,14 +10,21 @@
 		function AddStoryController(storyService){
 			
 			var vm = this;
-			vm.text = {};
-			vm.author = {};
-			vm.project = {};
-			vm.addStory = addStory;
+			vm.story.text = {};
+			vm.story.author = {};
+			vm.story.project = {};
+			vm.story.status = 'New';
 			
-			function addStory(){
-				storyService.addStory()
+			vm.addStory = addStory;
+			vm.reset = reset;
+			
+			function addStory(newStory){
+				storyService.addStory(newStory)
 							.then();
+			}
+			
+			function reset(){
+				vm.story.text = '';
 			}
 		}
 })();

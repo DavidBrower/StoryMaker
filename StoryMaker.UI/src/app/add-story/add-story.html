@@ -1,3 +1,11 @@
 <div class="container">
-	<h1>Add</h1>
+ <form novalidate class="simple-form">
+      <div><h3>User Story:</h3></div> 
+      <textarea ng-model="vm.story.text" style="height:250px; width:550px; overflow:scroll;" required>
+        </textarea>
+        <p>
+          <input type="button" ng-click="vm.reset()" value="Reset" />
+          <input type="submit" ng-click="vm.addStory(story)" value="Save" ng-disabled="simple-form.$invalid"/>
+        </p>
+  </form>
 </div>	

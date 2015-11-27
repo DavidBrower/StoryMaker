@@ -41,9 +41,9 @@
 						"I can write some terrific user stories " +
 						"So that the Lids have some work";
 						
-			//vm.addStory();
+			vm.addStory();
 			
-			expect(storyService.bump).toBeDefined();
+			expect(vm.addStory).toBeDefined();
 		});
 	});
 })();
